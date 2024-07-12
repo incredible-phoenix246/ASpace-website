@@ -21,7 +21,7 @@ const config = {
       colors: {
         "brand-main": "#be1e2d",
         "brand-blue": "#2a3780",
-        "brand-white": "##FFFFF0",
+        "brand-white": "#FFFFF0",
       },
       keyframes: {
         "accordion-down": {
