@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroSection } from "@/modules/sections";
+import { HeroSection,  } from "@/modules/sections";
 
 const page = () => {
   return <HeroSection />;

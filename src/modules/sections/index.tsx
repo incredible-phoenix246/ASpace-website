@@ -9,6 +9,7 @@ const HeroSection = () => {
         <Hero.HeroRIght />
       </main>
       <Hero.HeroMobile />
+      <Hero.Solution />
     </>
   );
 };

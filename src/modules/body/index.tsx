@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -73,4 +75,76 @@ const HeroMobile = () => {
   );
 };
 
-export { HeroRIght, HeroLeft, HeroMobile };
+const Solution = () => {
+  return (
+    <div className="flex flex-col md:flex-row items-center justify-center gap-2 container mt-10">
+      <div className="flex gap-1">
+        <div className="flex items-center justify-center p-2 bg-brand-blue h-[80px] w-[80px]">
+          <Image
+            src="/cube1.png"
+            alt="solution-1"
+            width={70}
+            height={70}
+            className="object-cover h-[70px] w-[70px] rounded-md"
+          />
+        </div>
+        <div className="flex flex-col">
+          <h3 className="text-brand-blue text-xl font-bold font-unica">
+            Architect your Solution
+          </h3>
+          <p className="text-base">
+            Our team in on your operational, technological, and strategic
+            challenges through an in-depth understanding of your business. We
+            design a strategic roadmap to guide your result-oriented goals.
+          </p>
+        </div>
+      </div>
+      <div className="flex gap-1">
+        <div className="flex items-center justify-center p-2 bg-brand-blue h-[80px] w-[80px]">
+          <Image
+            src="/cube2.png"
+            alt="solution-1"
+            width={70}
+            height={70}
+            className="object-cover h-[70px] w-[70px] rounded-md"
+          />
+        </div>
+        <div className="flex flex-col">
+          <h3 className="text-brand-blue text-xl font-bold font-unica">
+            Engineer your Solution
+          </h3>
+          <p className="text-base">
+            We promptly put together your nearshore engineering dream team to
+            fulfill your specific requirements. We create the most elegant
+            solution for your difficulties by combining our deep tech expertise,
+            Top 1% Tech Talent, and industry-specific experience.
+          </p>
+        </div>
+      </div>
+      <div className="flex gap-1">
+        <div className="flex items-center justify-center p-2 bg-brand-blue h-[80px] w-[80px]">
+          <Image
+            src="/cube3.png"
+            alt="solution-1"
+            width={70}
+            height={70}
+            className="object-cover h-[70px] w-[70px] rounded-md"
+          />
+        </div>
+        <div className="flex flex-col">
+          <h3 className="text-brand-blue text-xl font-bold font-unica">
+            ReEngineer your Business Process
+          </h3>
+          <p className="text-base">
+            Bolster by our team, your digital transformation swiftly gains speed
+            and evolves into a digital acceleration. This process places the
+            foundation for a more efficient and strong business that can meet
+            demands at scale.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export { HeroRIght, HeroLeft, HeroMobile, Solution };
