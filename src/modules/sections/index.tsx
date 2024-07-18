@@ -10,6 +10,9 @@ const HeroSection = () => {
       </main>
       <Hero.HeroMobile />
       <Hero.Solution />
+      <Hero.HowSection />
+      <Hero.Expertise />
+      <Hero.StackSection />
     </>
   );
 };

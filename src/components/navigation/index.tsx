@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        " max-[500px]:py-2   px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full justify-between items-center  transition-colors duration-500 container",
+        " max-[500px]:py-2   px-4 sm:px-8 xl:px-16 2xl:px-24 flex w-full justify-between items-center  transition-colors duration-500",
         scrollHeight > 200
           ? " fixed backdrop-blur-xl top-0 left-0  z-50 -translate-y-28 opacity-0 animate-slideDown bg-brand-white/90 py-2 border-b border-gray-200 shadow-md"
           : "sm:py-6 py-4",

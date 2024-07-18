@@ -3,6 +3,7 @@ import * as f from "@/fonts";
 import "../styles/globals.scss";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASEURL as string),
   title: {
     default: "ASPACE Network and Technologies Limited",
     template: `%s | ASPACE`,

@@ -5,6 +5,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "iconsax-react";
+import * as Icon from "@/components/icons";
+
+interface StackCardProps {
+  iconSrc: string;
+  title: string;
+  id: number;
+}
 
 const HeroLeft = () => {
   return (
@@ -77,9 +84,9 @@ const HeroMobile = () => {
 
 const Solution = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-2 container mt-10">
-      <div className="flex gap-1">
-        <div className="flex items-center justify-center p-2 bg-brand-blue h-[80px] w-[80px]">
+    <div className="flex flex-col md:flex-row md:flex-wra items-center justify-center gap-2 container mt-10">
+      <div className="flex gap-2">
+        <div className="flex items-center justify-center p-2 bg-brand-blue min-h-[80px] min-w-[80px] max-h-[80px]  rounded-lg">
           <Image
             src="/cube1.png"
             alt="solution-1"
@@ -99,8 +106,8 @@ const Solution = () => {
           </p>
         </div>
       </div>
-      <div className="flex gap-1">
-        <div className="flex items-center justify-center p-2 bg-brand-blue h-[80px] w-[80px]">
+      <div className="flex gap-2">
+        <div className="flex items-center justify-center p-2 bg-brand-main min-h-[80px] min-w-[80px] max-h-[80px]  rounded-lg">
           <Image
             src="/cube2.png"
             alt="solution-1"
@@ -121,8 +128,8 @@ const Solution = () => {
           </p>
         </div>
       </div>
-      <div className="flex gap-1">
-        <div className="flex items-center justify-center p-2 bg-brand-blue h-[80px] w-[80px]">
+      <div className="flex gap-2">
+        <div className="flex items-center justify-center p-2 bg-brand-blue min-h-[80px] min-w-[80px] max-h-[80px]  rounded-lg">
           <Image
             src="/cube3.png"
             alt="solution-1"
@@ -147,4 +154,232 @@ const Solution = () => {
   );
 };
 
-export { HeroRIght, HeroLeft, HeroMobile, Solution };
+const HowSection = () => {
+  return (
+    <section className="bg-brand-main">
+      <section className="flex flex-col items-center justify-center  mt-[50px] py-3  [background:var (--red,_linear-gradient(90deg,_#ec5f6c_0%_#be1e2d_100%))] [box-shadow:0px_4px_16px_0px_rgba(0_0_0_0.06)] w-full container">
+        <div className="flex flex-col gap-4 items-center text-center">
+          <h2 className="text-brand-blue text-xl font-bold font-unica">
+            How to Start
+          </h2>
+          <h3 className="text-brand-white text-4xl font-semibold">
+            Easy Process
+          </h3>
+          <p className="text-brand-white text-lg font-poppins lg:w-[80%]">
+            We specialize in helping you build a team of expert developers,
+            testers, and leaders.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-between w-full py-3">
+          <div className="flex flex-col items-center gap-2">
+            <Icon.Message />
+            <div className="flex gap-2 items-center justify-center">
+              <h1 className="text-brand-blue text-4xl font-bold font-worksans">
+                01
+              </h1>
+              <h3 className="text-brand-blue text-xl font-bold font-unica">
+                YOU ASK
+              </h3>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Icon.Settings />
+            <div className="flex gap-2 items-center justify-center">
+              <h1 className="text-brand-blue text-4xl font-bold font-worksans">
+                02
+              </h1>
+              <h3 className="text-brand-blue text-xl font-bold font-unica">
+                WE PROCEED
+              </h3>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Icon.HandShake />
+            <div className="flex gap-2 items-center justify-center">
+              <h1 className="text-brand-blue text-4xl font-bold font-worksans">
+                03
+              </h1>
+              <h3 className="text-brand-blue text-xl font-bold font-unica">
+                Negotiate
+              </h3>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <Icon.Medal />
+            <div className="flex gap-2 items-center justify-center">
+              <h1 className="text-brand-blue text-4xl font-bold font-worksans">
+                04
+              </h1>
+              <h3 className="text-brand-blue text-xl font-bold font-unica">
+                YOU GET
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  );
+};
+
+const Expertise = () => {
+  return (
+    <section className="container flex flex-col py-10 text-center md:text-start gap-2 md:gap-4 items-center justify-center lg:items-start">
+      <h2 className="text-lg md:text-2xl font-unica font-semibold">
+        Expertise
+      </h2>
+      <h2 className="text-2xl md:text-4xl lg:w-[50%] font-bold text-brand-blue font-worksans">
+        Hire Permanent and Remote Developers
+      </h2>
+      <p className="text-sm md:text-balance lg:w-[40%] font-poppins">
+        From full-time remote engineering teams to hourly contractors, work with
+        remote devs as needed
+      </p>
+      <div className="flex flex-wrap lg:flex-row items-center justify-between place-content-center mt-5 gap-2">
+        <div className="flex flex-col gap-1.5 w-[357px] items-center justify-center">
+          <div className="flex items-center justify-center p-2 bg-brand-main min-h-[80px] min-w-[80px] max-w-[80px] max-h-[80px] rounded-lg">
+            <Image
+              src="/link1.png"
+              alt="solution-1"
+              width={70}
+              height={70}
+              className="object-cover h-[70px] w-[70px] rounded-md"
+            />
+          </div>
+          <h2 className="text-2xl font-raleway text-brand-blue font-bold">
+            Dedicated Teams
+          </h2>
+          <span className="text-xs md:text-sm">Find your next team member</span>
+        </div>
+        <div className="flex flex-col gap-1.5 w-[357px] items-center justify-center">
+          <div className="flex items-center justify-center p-2 bg-brand-blue min-h-[80px] min-w-[80px] max-w-[80px] max-h-[80px] rounded-lg">
+            <Image
+              src="/link2.png"
+              alt="solution-1"
+              width={70}
+              height={70}
+              className="object-cover h-[70px] w-[70px] rounded-md"
+            />
+          </div>
+          <h2 className="text-2xl font-raleway text-brand-blue font-bold">
+            Staff Augmentation
+          </h2>
+          <span className="text-xs md:text-sm">
+            Build a distributed development team
+          </span>
+        </div>
+        <div className="flex flex-col gap-1.5 w-[357px] items-center justify-center">
+          <div className="flex items-center justify-center p-2 bg-brand-main min-h-[80px] min-w-[80px] max-w-[80px] max-h-[80px] rounded-lg">
+            <Image
+              src="/link3.png"
+              alt="solution-1"
+              width={70}
+              height={70}
+              className="object-cover h-[70px] w-[70px] rounded-md"
+            />
+          </div>
+          <h2 className="text-2xl font-raleway text-brand-blue font-bold">
+            Software Outsourcing
+          </h2>
+          <span className="text-xs md:text-sm">
+            End-to-End Software Development Outsourcing Solutions
+          </span>
+        </div>
+        <div className="flex flex-col gap-1.5 w-[357px] items-center justify-center">
+          <div className="flex items-center justify-center p-2 bg-brand-blue min-h-[80px] min-w-[80px] max-w-[80px] max-h-[80px] rounded-lg">
+            <Image
+              src="/link4.png"
+              alt="solution-1"
+              width={70}
+              height={70}
+              className="object-cover h-[70px] w-[70px] rounded-md"
+            />
+          </div>
+          <h2 className="text-2xl font-raleway text-brand-blue font-bold">
+            Remote Office
+          </h2>
+          <span className="text-xs md:text-sm">
+            Open your own remote development center and grow your business
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const StackCard = ({ title, iconSrc }: StackCardProps) => {
+  return (
+    <div className="flex gap-5 bg-brand-white rounded-xl shadow-sm">
+      <div className="flex gap-5">
+        <div className="shrink-0 bg-brand-blue rounded-xl shadow-sm h-[93px] w-[13px]" />
+        <Image
+          src={`${iconSrc}`}
+          alt=""
+          width={52}
+          height={52}
+          className="shrink-0 my-auto aspect-square w-[52px]"
+        />
+      </div>
+      <div className="flex-auto my-auto text-lg font-semibold text-blue-950">
+        {title}
+      </div>
+    </div>
+  );
+};
+
+export const stackData = [
+  { id: 1, iconSrc: "/stack1.png", title: "Frontend Engineers" },
+  { id: 2, iconSrc: "/stack2.png", title: "Angular Developers" },
+  {
+    id: 3,
+    iconSrc: "/stack3.png",
+    title: "AI and ML Engineers Deep Learning/Machine Vision/NLP",
+  },
+  { id: 4, iconSrc: "/stack4.png", title: "Application Security Engineers" },
+  { id: 5, iconSrc: "/stack5.png", title: "Fullstack Engineers" },
+  { id: 6, iconSrc: "/stack6.png", title: "DevOps + DevSecOps Engineers" },
+  { id: 7, iconSrc: "/stack7.png", title: "Data Scientist / Data Engineers" },
+  { id: 8, iconSrc: "/stack8.png", title: "IOS and Android Developers" },
+  { id: 9, iconSrc: "/stack9.png", title: "UI/UX Engineers" },
+  { id: 10, iconSrc: "/stack10.png", title: "PHP Developers" },
+  { id: 11, iconSrc: "/stack11.png", title: "Project Managers" },
+  { id: 12, iconSrc: "/stack12.png", title: "Solution Architects" },
+  { id: 13, iconSrc: "/stack13.png", title: "QA Engineers" },
+  { id: 14, iconSrc: "/stack14.png", title: "Wordpress CMS Developers" },
+  { id: 15, iconSrc: "/stack15.png", title: "Business Analyst" },
+  { id: 16, iconSrc: "/stack16.png", title: "Tech Leads / Team Leads" },
+  { id: 17, iconSrc: "/stack17.png", title: "Product Designer" },
+  { id: 18, iconSrc: "/stack18.png", title: "Mobile App Developers" },
+  { id: 19, iconSrc: "/stack19.png", title: "Information Security Engineers" },
+  { id: 20, iconSrc: "/stack20.png", title: "Golang Dev" },
+  { id: 21, iconSrc: "/stack21.png", title: "Database Admin" },
+];
+
+const StackSection = () => {
+  return (
+    <section className="flex justify-center items-center container py-20 max-md:px-5">
+      <div className="flex flex-col mt-4 w-full">
+        <h2 className="text-2xl font-semibold text-blue-900 max-md:max-w-full">
+          Specialized
+        </h2>
+        <h1 className="mt-10 text-5xl font-semibold text-blue-900 leading-[58px] max-md:max-w-full max-md:text-4xl max-md:leading-[57px]">
+          Specialized Staff We Provide
+        </h1>
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5 mt-14 grid-cols-1 max-md:mt-10">
+          {stackData.map((da) => (
+            <StackCard key={da.id} {...da} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export {
+  HeroRIght,
+  HeroLeft,
+  HeroMobile,
+  Solution,
+  HowSection,
+  Expertise,
+  StackSection,
+};
