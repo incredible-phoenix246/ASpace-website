@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Navbar } from "@/components/navigation";
 import { SkeletonNavbar } from "@/components/skelton";
+import Footer from "@/components/navigation/footer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Suspense>
       {children}
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "iconsax-react";
 import * as Icon from "@/components/icons";
+import { cn } from "@/utils";
 
 interface StackCardProps {
   iconSrc: string;
@@ -403,11 +404,83 @@ const ContactUs = () => {
           Connect With Your Next Great Hire Today!Connect With Your Next Great
           Hire Today!
         </h1>
-        <div className="flex flex-col w-full">
-          <div className="">
-            
+        <div className="flex flex-col w-full mt-5">
+          <div className="flex gap-1">
+            <div className="w-full flex-col justify-start items-start gap-1.5 flex">
+              <label
+                htmlFor=""
+                className="flex gap-1 items-center text-[#0F172A] text-base font-medium leading-relaxed"
+              >
+                Company
+              </label>
+              <input
+                type="text"
+                className="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex h-[56px]"
+                placeholder="Company"
+              />
+            </div>
+            <div className="w-full flex-col justify-start items-start gap-1.5 flex">
+              <label
+                htmlFor=""
+                className="flex gap-1 items-center text-[#0F172A] text-base font-medium leading-relaxed"
+              >
+                Your Name
+              </label>
+              <input
+                type="text"
+                className="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex h-[56px]"
+                placeholder="Name"
+              />
+            </div>
+          </div>
+          <div className="flex gap-1">
+            <div className="w-full flex-col justify-start items-start gap-1.5 flex">
+              <label
+                htmlFor=""
+                className="flex gap-1 items-center text-[#0F172A] text-base font-medium leading-relaxed"
+              >
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                className="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex h-[56px]"
+                placeholder="(234) 123 456 789"
+              />
+            </div>
+            <div className="w-full flex-col justify-start items-start gap-1.5 flex">
+              <label
+                htmlFor=""
+                className="flex gap-1 items-center text-[#0F172A] text-base font-medium leading-relaxed"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                className="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex h-[56px]"
+                placeholder="Name"
+              />
+            </div>
+          </div>
+          <div className="w-full flex-col justify-start items-start gap-1.5 flex">
+            <label
+              htmlFor=""
+              className="flex gap-1 items-center text-[#0F172A] text-base font-medium leading-relaxed"
+            >
+              Project Details
+            </label>
+            <textarea
+              className="w-full  md:h-[200px] h-[150px] resize-none p-4"
+              placeholder="project title"
+            />
           </div>
         </div>
+        <button
+          className={cn(
+            "rounded-lg bg-brand-blue mt-5 text-white min-[450px]:w-[178px] min-[450px]:h-[56px] h-[40px] px-2 max-[450px]:px-4 text-base hover:opacity-80 transition-opacity duration-300 disabled:cursor-not-allowed disabled:opacity-40 font-medium dark:text-gray-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-light"
+          )}
+        >
+          GET CONSULTATION
+        </button>
       </div>
     </section>
   );
