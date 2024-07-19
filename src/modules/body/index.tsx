@@ -374,6 +374,59 @@ const StackSection = () => {
   );
 };
 
+const Framework = () => {
+  return (
+    <section className="flex flex-col container items-center justify-center w-full py-10 md:py-20">
+      <div className="flex flex-col items-center w-full justify-center gap-3">
+        <h2 className="text-lg md:text-2xl font-unica font-semibold">
+          Specialized
+        </h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-brand-blue font-worksans">
+          Technologies
+        </h2>
+      </div>
+      <div className="mt-6 flex flex-wrap w-full items-center justify-between">
+        <Image src="/framework1.png" alt="framework" width={213} height={71} />
+        <Image src="/framework2.png" alt="framework" width={232} height={57} />
+        <Image src="/framework3.png" alt="framework" width={148} height={81} />
+        <Image src="/framework4.png" alt="framework" width={171} height={94} />
+      </div>
+    </section>
+  );
+};
+
+const ContactUs = () => {
+  return (
+    <section className="lg:flex hidden flex-col mt-5 lg:absolute lg:rounded-tl-[100px] py-5 justify-end items-end">
+      <div className="flex z-10 flex-col my-auto w-full justify-end md:w-[50%] p-[3%] lg:rounded-tl-[100px]  bg-brand-white">
+        <h1 className="lg:text-4xl md:text-2xl text-xl font-semibold text-brand-blue font-unica">
+          Connect With Your Next Great Hire Today!Connect With Your Next Great
+          Hire Today!
+        </h1>
+        <div className="flex flex-col w-full">
+          <div className="">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const contactUsRight = () => {
+  return (
+    <section className="flex justify-start w-full">
+      <Image
+        src="/contact.png"
+        alt="hero-right"
+        width={1000}
+        height={992}
+        className="object-cover w-full h-full rounded-md hidden lg:block max-w-[58%]"
+      />
+    </section>
+  );
+};
+
 export {
   HeroRIght,
   HeroLeft,
@@ -382,4 +435,7 @@ export {
   HowSection,
   Expertise,
   StackSection,
+  Framework,
+  ContactUs,
+  contactUsRight,
 };
