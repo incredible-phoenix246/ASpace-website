@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
 
           <div className="lg:mx-auto text-left ">
-            <h4 className="text-lg text-gray-900 font-medium mb-7">Pagedone</h4>
+            <h4 className="text-lg text-gray-900 font-medium mb-7">ASPACE</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
                 <a
