@@ -22,4 +22,18 @@ const HeroSection = () => {
   );
 };
 
-export { HeroSection };
+const AboutSection = () => {
+  return (
+    <>
+      <Hero.AboutSection />
+      <Hero.GetStartedSection />
+      <Hero.WhyHireSection />
+      <main className="flex container relative justify-between items-center">
+        <Hero.ContactUs />
+        <Hero.contactUsRight />
+      </main>
+    </>
+  );
+};
+
+export { HeroSection, AboutSection };

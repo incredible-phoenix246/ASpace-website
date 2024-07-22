@@ -7,6 +7,12 @@ import Link from "next/link";
 import { ArrowRight } from "iconsax-react";
 import * as Icon from "@/components/icons";
 import { cn } from "@/utils";
+import dynamic from "next/dynamic";
+
+const TypewriterComponent = dynamic(() => import("typewriter-effect"), {
+  ssr: false,
+  loading: () => <LoadingSpinner color="border-white" />,
+});
 
 interface StackCardProps {
   iconSrc: string;
@@ -500,6 +506,252 @@ const contactUsRight = () => {
   );
 };
 
+type Props = {
+  color?: string;
+  innerColor?: string;
+};
+const LoadingSpinner = ({ color, innerColor }: Props) => (
+  <div className="relative h-9 w-9 sm:h-16 sm:w-16 ">
+    <div
+      className={`animate-loadspin rounded-full border-4 border-r-transparent border-b-transparent ${
+        color || "border-primary"
+      } border-solid h-full w-full absolute `}
+    />
+
+    <div
+      className={` rounded-full border-4  ${
+        innerColor || "border-primary/30"
+      } border-solid h-full w-full`}
+    />
+  </div>
+);
+
+const AboutSection = () => {
+  return (
+    <section className="relative h-[500px] sm:h-[720px] w-full">
+      <div className="w-full h-full max-h-[720px] hidden sm:block absolute top-0 left-0 bg-primary">
+        <Image
+          src="/hero-about.png"
+          alt="hero image"
+          width={1440}
+          height={720}
+          priority
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="w-full h-full max-h-[650px] sm:hidden absolute top-0 left-0 bg-primary">
+        <Image
+          src="/hero-about.png"
+          alt="hero image"
+          width={380}
+          height={500}
+          priority
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="flex top-0 relative z-10 text-white h-full items-center w-full sm:bg-black/50 lg:bg-black/70 justify-center px-2 sm:px-4 lg:px-8 transition-colors duration-500">
+        <div className="flex flex-col gap-y-5 w-full sm:max-w-[90%]   xl:max-w-[85%] 2xl:max-w-[90%]  items-center">
+          <h2 className="max-[400px]:text-base max-[500px]:text-lg text-xl sm:text-3xl md:text-4xl text-center xl:text-5xl 2xl:text-6xl font-semibold sm:font-bold scale-y-110 mb-4 lg:mb-8">
+            <TypewriterComponent
+              component="span"
+              options={{
+                autoStart: true,
+                delay: 100,
+                loop: true,
+                strings: [
+                  "Empower your project journey with Aspace Network and Technology Limited",
+                  "Transform Your Project Journey: Empower with Aspace Network and Technology Limited",
+                  "Unlock Possibilities: Empower Your Project Journey with Aspace Network and Technology Limited",
+                  "Collaborate and Empower Your Project Journey with Aspace Network and Technology Limited",
+                  "Pioneer Your Project Journey with Aspace Network and Technology Limited: Embrace Innovation",
+                  "Drive Success: Empower Your Project Journey with Aspace Network and Technology Limited",
+                ],
+
+                deleteSpeed: 50,
+              }}
+            />
+          </h2>
+          <p className="w-full sm:max-w-[80%] text-center sm:font-medium text-white/80 text-sm sm:text-lg">
+            Your Ultimate Command Center for Effortless Project Management.
+            Elevate Collaboration, Monitor Progress, and Achieve Milestones with
+            Confidence. Sign Up Today for a Smarter Approach to Project Success
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+interface StepCardProps {
+  number: string;
+  title: string;
+  description: string;
+  iconSrc: string;
+}
+
+const StepCard: React.FC<StepCardProps> = ({
+  number,
+  title,
+  description,
+  iconSrc,
+}) => {
+  return (
+    <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+      <div className="grow mt-1.5 max-md:mt-10 max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+          <div className="flex flex-col w-1/5 max-md:ml-0 max-md:w-full">
+            <div className="flex justify-center items-center px-1.5 mx-auto w-20 h-20 bg-yellow-300 rounded-xl max-md:mt-8">
+              <Image
+                height={70}
+                width={70}
+                loading="lazy"
+                src={iconSrc}
+                alt=""
+                className="aspect-square w-[70px]"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col ml-5 w-4/5 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col grow mt-2 text-blue-950 max-md:mt-9">
+              <h3 className="text-3xl font-semibold leading-9">
+                {number}. {title}
+              </h3>
+              <p className="mt-6 text-lg">{description}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface Step {
+  number: string;
+  title: string;
+  description: string;
+  iconSrc: string;
+}
+
+const steps: Step[] = [
+  {
+    number: "01",
+    title: "Request",
+    description: "Tell us more about your requirements and technical needs",
+    iconSrc: "/abt1.png",
+  },
+  {
+    number: "02",
+    title: "Interview",
+    description: "You interview candidates. Average 2 interviews to hire.",
+    iconSrc: "/abt2.png",
+  },
+  {
+    number: "03",
+    title: "Hire",
+    description: "You choose who to hire, and we handle all the paperwork.",
+    iconSrc: "/abt1.png",
+  },
+];
+
+const GetStartedSection: React.FC = () => {
+  return (
+    <section className="flex flex-col px-5 container mt-10">
+      <h2 className="w-full text-5xl font-semibold leading-[58px] text-blue-950 max-md:max-w-full max-md:text-4xl max-md:leading-[57px]">
+        How to Get Started with Courtney
+      </h2>
+      <p className="mt-8 w-full text-lg text-blue-950 max-md:max-w-full">
+        From full-time remote engineering teams to hourly contractors, work with
+        remote devs as needed
+      </p>
+      <div className="px-px mt-28 w-full max-md:mt-10 max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+          {steps.map((step, index) => (
+            <StepCard key={index} {...step} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+interface Reason {
+  text: string;
+}
+
+interface ReasonColumnProps {
+  reasons: Reason[];
+  className?: string;
+}
+
+const ReasonColumn: React.FC<ReasonColumnProps> = ({ reasons, className }) => {
+  return (
+    <div className={className}>
+      {reasons.map((reason, index) => (
+        <div key={index} className={cn(index > 0 ? "mt-12 max-md:mt-10" : "")}>
+          &gt;{reason.text}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+interface Reason {
+  text: string;
+}
+
+const leftReasons: Reason[] = [
+  { text: "Talent shortage" },
+  { text: "Cost Optimization" },
+];
+
+const middleReasons: Reason[] = [
+  { text: "Lack of Expertise" },
+  { text: "Talent Accessibility" },
+];
+
+const rightReasons: Reason[] = [
+  { text: "Quick Kick-Off" },
+  { text: "Administrative Hassle" },
+];
+
+const WhyHireSection: React.FC = () => {
+  return (
+    <section className="mt-36 w-full max-md:my-10 max-md:max-w-full container">
+      <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+        <div className="flex flex-col w-[74%] max-md:ml-0 max-md:w-full">
+          <div className="grow max-md:mt-10 max-md:max-w-full">
+            <div className="flex gap-5 max-md:flex-col max-md:gap-0">
+              <div className="flex flex-col w-[64%] max-md:ml-0 max-md:w-full">
+                <div className="flex flex-col grow text-3xl font-semibold leading-9 text-blue-950 max-md:mt-2 max-md:max-w-full">
+                  <h2 className="text-5xl leading-[58px] max-md:max-w-full max-md:text-4xl max-md:leading-[57px]">
+                    Why You Need To Hire <br /> Remote Developers
+                  </h2>
+                  <ReasonColumn
+                    reasons={leftReasons}
+                    className="mt-24 max-md:mt-10 max-md:max-w-full"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col ml-5 w-[36%] max-md:ml-0 max-md:w-full">
+                <ReasonColumn
+                  reasons={middleReasons}
+                  className="flex flex-col grow mt-52 text-3xl font-semibold leading-9 text-blue-950 max-md:mt-10"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col ml-5 w-[26%] max-md:ml-0 max-md:w-full">
+          <ReasonColumn
+            reasons={rightReasons}
+            className="flex flex-col mt-52 text-3xl font-semibold leading-9 text-blue-950 max-md:mt-10"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export {
   HeroRIght,
   HeroLeft,
@@ -511,4 +763,7 @@ export {
   Framework,
   ContactUs,
   contactUsRight,
+  AboutSection,
+  GetStartedSection,
+  WhyHireSection,
 };

@@ -16,48 +16,48 @@ const Footer = () => {
               Trusted in more than 100 countries & 5 million customers. Have any
               query ?
             </p>
-            <a
-              href="javascript:;"
+            <Link
+              href=""
               className="py-2.5 px-5 h-9 block w-fit bg-indigo-600 rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-indigo-700 lg:mx-0"
             >
               Contact us
-            </a>
+            </Link>
           </div>
 
           <div className="lg:mx-auto text-left ">
             <h4 className="text-lg text-gray-900 font-medium mb-7">ASPACE</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className="text-gray-600 hover:text-gray-900"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   Features
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -66,36 +66,36 @@ const Footer = () => {
             <h4 className="text-lg text-gray-900 font-medium mb-7">Products</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className="text-gray-600 hover:text-gray-900"
                 >
                   Figma UI System
-                </a>
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   Icons Assets
-                </a>
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   Responsive Blocks
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   Components Library
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -106,36 +106,36 @@ const Footer = () => {
             </h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className="text-gray-600 hover:text-gray-900"
                 >
                   FAQs
-                </a>
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   Quick Start
-                </a>
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   Documentation
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   User Guide
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -144,36 +144,36 @@ const Footer = () => {
             <h4 className="text-lg text-gray-900 font-medium mb-7">Blogs</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className="text-gray-600 hover:text-gray-900"
                 >
                   News
-                </a>
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   Tips & Tricks
-                </a>
+                </Link>
               </li>
               <li className="mb-6">
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   New Updates
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="javascript:;"
+                <Link
+                  href=""
                   className=" text-gray-600 hover:text-gray-900"
                 >
                   Events
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -185,8 +185,8 @@ const Footer = () => {
               Copyright {new Date().getFullYear()} ASPACE All rights reserved.
             </span>
             <div className="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
-              <a
-                href="javascript:;"
+              <Link
+                href=""
                 className="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600"
               >
                 <svg
@@ -204,9 +204,9 @@ const Footer = () => {
                     />
                   </g>
                 </svg>
-              </a>
-              <a
-                href="javascript:;"
+              </Link>
+              <Link
+                href=""
                 className="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600"
               >
                 <svg
@@ -220,9 +220,9 @@ const Footer = () => {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
-              <a
-                href="javascript:;"
+              </Link>
+              <Link
+                href=""
                 className="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600"
               >
                 <svg
@@ -236,9 +236,9 @@ const Footer = () => {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
-              <a
-                href="javascript:;"
+              </Link>
+              <Link
+                href=""
                 className="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600"
               >
                 <svg
@@ -248,13 +248,13 @@ const Footer = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M13.9346 1.13529C14.5684 1.30645 15.0665 1.80588 15.2349 2.43896C15.5413 3.58788 15.5413 5.98654 15.5413 5.98654C15.5413 5.98654 15.5413 8.3852 15.2349 9.53412C15.0642 10.1695 14.5661 10.669 13.9346 10.8378C12.7886 11.1449 8.19058 11.1449 8.19058 11.1449C8.19058 11.1449 3.59491 11.1449 2.44657 10.8378C1.81277 10.6666 1.31461 10.1672 1.14622 9.53412C0.839844 8.3852 0.839844 5.98654 0.839844 5.98654C0.839844 5.98654 0.839844 3.58788 1.14622 2.43896C1.31695 1.80353 1.81511 1.30411 2.44657 1.13529C3.59491 0.828125 8.19058 0.828125 8.19058 0.828125C8.19058 0.828125 12.7886 0.828125 13.9346 1.13529ZM10.541 5.98654L6.72178 8.19762V3.77545L10.541 5.98654Z"
                     fill="currentColor"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
